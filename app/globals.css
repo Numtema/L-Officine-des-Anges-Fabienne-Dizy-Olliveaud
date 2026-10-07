@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-editorial: var(--font-instrument-serif), "Times New Roman", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+
+  --color-ivory: var(--ivory);
+  --color-paper: var(--paper);
+  --color-limestone: var(--limestone);
+  --color-sand: var(--sand);
+  --color-petrol: var(--petrol);
+  --color-petrol-deep: var(--petrol-deep);
+  --color-ink: var(--ink);
+  --color-olive: var(--olive);
+  --color-olive-dark: var(--olive-dark);
+  --color-champagne: var(--champagne);
+  --color-gold-line: var(--gold-line);
+  --color-amber: var(--amber);
+  --color-sky: var(--sky);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-glass: var(--glass);
+
+  --radius-control: var(--radius-control);
+  --radius-input: var(--radius-input);
+  --radius-card: var(--radius-card);
+  --radius-image: var(--radius-image);
+  --radius-section: var(--radius-section);
+  --radius-hero: var(--radius-hero);
+}
+
+:root {
+  --ivory: #F7F2E8;
+  --paper: #FCF8F0;
+  --limestone: #E9DDCA;
+  --sand: #D8C7AB;
+  --petrol: #064D58;
+  --petrol-deep: #063840;
+  --ink: #132833;
+  --olive: #7C8061;
+  --olive-dark: #555B42;
+  --champagne: #C8A66A;
+  --gold-line: #C7A363;
+  --amber: #A45F24;
+  --sky: #CBEAF3;
+  --muted: #6F756F;
+  --border: rgba(19, 40, 51, 0.12);
+  --glass: rgba(255, 255, 255, 0.52);
+
+  --radius-control: 18px;
+  --radius-input: 22px;
+  --radius-card: 32px;
+  --radius-image: 44px;
+  --radius-section: 56px;
+  --radius-hero: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--petrol-deep);
+}
+
+body {
+  background-color: var(--petrol-deep);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom editorial selection */
+::selection {
+  background: rgba(199, 163, 99, 0.28);
+  color: #063840;
+}
+
+/* Fluid display headings */
+.font-editorial {
+  font-family: var(--font-instrument-serif), "Times New Roman", Georgia, serif;
+}
+
+/* Botanical shadow animated mask */
+@keyframes sway {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(8px, 6px) rotate(1.2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-botanical-sway {
+  animation: sway 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-botanical-sway {
+    animation: none !important;
+  }
+}
